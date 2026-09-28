@@ -142,6 +142,7 @@ New file:  [101]       [103]
 ## 👤 Author
 
 **Adnan Ahmad**
-[LinkedIn](https://www.linkedin.com/in/2008adnanahmad/) · [GitHub - 2008adnan](https://github.com/2008adnan)
+[LinkedIn](https://www.linkedin.com/in/2008adnanahmad/) 
+[GitHub - 2008adnan](https://github.com/2008adnan)
 
 ⭐ If you found this helpful, consider giving the repo a star!
