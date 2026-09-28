@@ -18,7 +18,7 @@ void clearBuffer(){
 
 //returning 1 if roll number exists else 0
 int rollExists(int roll){
-    FILE *fp = fopen(FILE_NAME, "r");
+    FILE *fp = fopen(FILE_NAME, "rb");
     struct Student s;
 
     while(fread(&s, sizeof(s),1,fp)==1){
@@ -75,7 +75,7 @@ void addStudent(){
 }
 
 void displayStudent(){
-    FILE *fp = fopen(FILE_NAME, "r");
+    FILE *fp = fopen(FILE_NAME, "rb");
     printf("\n--- All Students ---\n");
     if(fp == NULL){
         printf("No record found. Add a Student first.\n");
@@ -103,7 +103,7 @@ void displayStudent(){
 }
     
 void searchStudent(){
-    FILE *fp = fopen(FILE_NAME, "r");
+    FILE *fp = fopen(FILE_NAME, "rb");
     struct Student s;
     int roll,found = 0;
     if (fp == NULL) {
@@ -142,7 +142,7 @@ void rusticateStudent(){
     char confirm;
 
     printf("\n--- Rusticate Student ---\n");
-    fp = fopen(FILE_NAME, "r");
+    fp = fopen(FILE_NAME, "rb");
     if (fp == NULL) {
         printf("No records found. Add a student first.\n");
         return;
@@ -181,7 +181,7 @@ void rusticateStudent(){
         return;
     }
 
-    temp = fopen("temp.dat", "w");
+    temp = fopen("temp.dat", "wb");
     if (temp == NULL) {
         printf("Error: could not create temporary file!\n");
         fclose(fp);
@@ -213,9 +213,9 @@ int main(){
     printf("1. Add\n");
     printf("2. Display\n");
     printf("3. Search\n");
-    printf("4. Exit\n");
+    printf("4. Rusticate\n");
+    printf("5. Exit\n");
     printf("Enter your choice: ");       
-    scanf("%d", &choice);
 
     if(scanf("%d", &choice) != 1){
         clearBuffer();
