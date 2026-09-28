@@ -188,7 +188,7 @@ void rusticateStudent(){
         return;
     }
  
-    rewind(fp);                             // go back to the start of the file 
+    rewind(fp);                            
     while (fread(&s, sizeof(s), 1, fp) == 1) {
         if (s.roll != roll) {
             fwrite(&s, sizeof(s), 1, temp);
